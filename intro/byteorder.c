@@ -1,8 +1,6 @@
 #include	"unp.h"
 
-int
-main(int argc, char **argv)
-{
+int main(int argc, char **argv){
 	union {
 	  short  s;
       char   c[sizeof(short)];
@@ -17,8 +15,9 @@ main(int argc, char **argv)
 			printf("little-endian\n");
 		else
 			printf("unknown\n");
-	} else
-		printf("sizeof(short) = %d\n", sizeof(short));
+	} else {
+		printf("sizeof(short) = %ld\n", sizeof(short));
+	}
 
 	exit(0);
 }
